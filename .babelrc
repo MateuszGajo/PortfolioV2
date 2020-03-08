@@ -1,0 +1,12 @@
+{
+  "presents": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": [">1%"]
+        }
+      }
+    ]
+  ]
+}
