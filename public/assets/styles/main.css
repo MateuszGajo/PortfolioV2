@@ -1,1 +1,51 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-family: 'Roboto', sans-serif; }
+
+h1, h2, h3, h4, h5, h6, a {
+  font-family: 'Oswald', sans-serif; }
+
+.container .aboutme {
+  overflow-x: hidden; }
+  .container .aboutme .aboutme__photo {
+    position: relative;
+    width: 100vw;
+    height: 100vh; }
+    .container .aboutme .aboutme__photo .aboutme_photo--maginfier-glass {
+      position: absolute;
+      display: block;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background-image: url(../images/myimage.jpg);
+      background-repeat: no-repeat;
+      background-size: 400px 600px;
+      background-position: center;
+      width: 300px;
+      height: 300px;
+      transition: width 0.2s, height 0.2s;
+      z-index: 2; }
+    .container .aboutme .aboutme__photo img {
+      display: block;
+      height: 100%;
+      margin: 0 auto;
+      opacity: 0; }
+    .container .aboutme .aboutme__photo .aboutme__photo__title {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      z-index: 1; }
+      .container .aboutme .aboutme__photo .aboutme__photo__title .aboutme__photo__title--text {
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 10rem;
+        color: #1a1a1a;
+        text-shadow: -10px -10px 10px grey;
+        transform: translateX(-100%); }
 
