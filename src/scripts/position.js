@@ -1,13 +1,13 @@
 const stateModule = (() => {
-  const aboutmeSection = document.querySelector(".aboutme");
+  const positionSection = document.querySelector(".position");
 
   let state = {
     isReverseText: false,
     transform: -50,
     textIntervalAnimate: null,
-    isAboutmeTextAnimate: false,
-    aboutmeFromTop: aboutmeSection.offsetTop,
-    aboutmeHeight: aboutmeSection.clientHeight,
+    isTextAnimate: false,
+    sectionFromTop: positionSection.offsetTop,
+    sectionHeight: positionSection.clientHeight,
     previousScrollYPosition: 0,
     circleSize: 300,
     previousCircleSize: 300
@@ -27,32 +27,32 @@ const stateModule = (() => {
 const animateText = (speed = 0.15) => {
   let transformProgress;
   const { isReverseText, transform } = stateModule.getState();
-  const aboutmeText = document.querySelector(".aboutme__photo__title--text");
+  const text = document.querySelector(".position__photo__title--text");
 
   if (!isReverseText) {
     if (transform + speed > 50) {
-      aboutmeText.style.transform = `translateX(50%)`;
+      text.style.transform = `translateX(50%)`;
       return stateModule.changeState({
         ...stateModule.getState(),
         isReverseText: true
       });
     }
     transformProgress = transform + speed;
-    aboutmeText.style.transform = `translateX(${transformProgress}%)`;
+    text.style.transform = `translateX(${transformProgress}%)`;
     stateModule.changeState({
       ...stateModule.getState(),
       transform: transformProgress
     });
   } else if (isReverseText) {
     if (transform - speed < -50) {
-      aboutmeText.style.transform = `translateX(-50%)`;
+      text.style.transform = `translateX(-50%)`;
       return stateModule.changeState({
         ...stateModule.getState(),
         isReverseText: false
       });
     }
     transformProgress = transform - speed;
-    aboutmeText.style.transform = `translateX(${transformProgress}%)`;
+    text.style.transform = `translateX(${transformProgress}%)`;
     stateModule.changeState({
       ...stateModule.getState(),
       transform: transformProgress
@@ -83,45 +83,45 @@ const managmentAnimationText = type => {
 
 window.addEventListener("scroll", () => {
   const {
-    isAboutmeTextAnimate,
-    aboutmeFromTop,
-    aboutmeHeight
+    isTextAnimate,
+    sectionFromTop,
+    sectionHeight
   } = stateModule.getState();
 
   const scrollY = window.scrollY;
   const heightWindow = window.innerHeight;
 
   if (
-    scrollY > aboutmeFromTop - heightWindow &&
-    scrollY < aboutmeFromTop + aboutmeHeight
+    scrollY > sectionFromTop - heightWindow &&
+    scrollY < sectionFromTop + sectionHeight
   ) {
-    if (!isAboutmeTextAnimate) {
+    if (!isTextAnimate) {
       managmentAnimationText("start");
       stateModule.changeState({
         ...stateModule.getState(),
-        isAboutmeTextAnimate: true
+        isTextAnimate: true
       });
     }
   } else {
     managmentAnimationText("remove");
     stateModule.changeState({
       ...stateModule.getState(),
-      isAboutmeTextAnimate: false
+      isTextAnimate: false
     });
   }
 });
 
 const circleAnimatePhoto = () => {
-  const glass = document.querySelector(".aboutme_photo--maginfier-glass");
+  const glass = document.querySelector(".position_photo--maginfier-glass");
   const {
-    aboutmeFromTop,
-    aboutmeHeight,
+    sectionFromTop,
+    sectionHeight,
     circleSize,
     previousCircleSize
   } = stateModule.getState();
   if (
-    window.scrollY + window.innerHeight < aboutmeFromTop ||
-    window.scrollY > aboutmeFromTop + aboutmeHeight
+    window.scrollY + window.innerHeight < sectionFromTop ||
+    window.scrollY > sectionFromTop + sectionHeight
   ) {
     return false;
   }
@@ -139,16 +139,16 @@ const circleAnimatePhoto = () => {
   glass.addEventListener("mousemove", blowUpPhoto);
   glass.addEventListener("mouseout", zoomOutPhoto);
   let distanseToMiddle =
-    aboutmeFromTop +
-    aboutmeHeight / 2 -
+    sectionFromTop +
+    sectionHeight / 2 -
     (window.scrollY + window.innerHeight / 2);
   distanseToMiddle =
     distanseToMiddle < 0 ? distanseToMiddle * -1 : distanseToMiddle;
   let scaleAboutSection;
 
-  const nowposition = window.scrollY + window.innerHeight - aboutmeFromTop;
+  const nowposition = window.scrollY + window.innerHeight - sectionFromTop;
   const aboutCenterPosition =
-    (aboutmeFromTop + aboutmeHeight / 2 - aboutmeFromTop) * 2;
+    (sectionFromTop + sectionHeight / 2 - sectionFromTop) * 2;
 
   if (nowposition > aboutCenterPosition) {
     scaleAboutSection =

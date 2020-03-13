@@ -1,10 +1,10 @@
-.container .aboutme {
+.container .position {
   overflow-x: hidden;
-  .aboutme__photo {
+  .position__photo {
     position: relative;
     width: 100vw;
     height: 100vh;
-    .aboutme_photo--maginfier-glass {
+    .position_photo--maginfier-glass {
       position: absolute;
       display: block;
       bottom: 0;
@@ -26,13 +26,13 @@
       margin: 0 auto;
       opacity: 0;
     }
-    .aboutme__photo__title {
+    .position__photo__title {
       position: absolute;
       top: 50%;
       left: 0;
       transform: translateY(-50%);
       z-index: 1;
-      .aboutme__photo__title--text {
+      .position__photo__title--text {
         white-space: nowrap;
         overflow: hidden;
         font-size: 10rem;
