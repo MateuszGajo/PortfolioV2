@@ -49,3 +49,16 @@ h1, h2, h3, h4, h5, h6, a {
         text-shadow: -10px -10px 10px grey;
         transform: translateX(-100%); }
 
+.start {
+  height: 100vh;
+  background-color: #efefef; }
+  .start .start--text {
+    position: absolute;
+    top: 50%;
+    margin: 0 10%;
+    transform: translateY(-50%); }
+    .start .start--text h1 {
+      font-size: 4rem; }
+    .start .start--text p {
+      margin-top: 5%; }
+
