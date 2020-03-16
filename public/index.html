@@ -1,56 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/styles/main.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,900&display=swap&subset=latin-ext"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <section class="start">
-        <div class="start--text">
-          <h1>Ponoś porażki często, abyś mógł odnieść sukces szybciej.</h1>
-          <p>TOM KELLEY, Ideo</p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./assets/styles/main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,900&display=swap&subset=latin-ext"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <section class="start">
+      <div class="start--text">
+        <h1>Ponoś porażki często, abyś mógł odnieść sukces szybciej.</h1>
+        <p>TOM KELLEY, Ideo</p>
+      </div>
+    </section>
+    <section class="position">
+      <div class="position__photo">
+        <div class="position_photo--maginfier-glass"></div>
+        <img src="./assets/images/myimage.jpg" />
+        <div class="position__photo__title">
+          <h1 class="position__photo__title--text">
+            Mateusz Gajo Front-End Developer
+          </h1>
         </div>
-      </section>
-      <section class="position">
-        <div class="position__photo">
-          <div class="position_photo--maginfier-glass"></div>
-          <img src="./assets/images/myimage.jpg" />
-          <div class="position__photo__title">
-            <h1 class="position__photo__title--text">
-              Mateusz Gajo Front-End Developer
-            </h1>
+      </div>
+    </section>
+    <section class="aboutme">
+      <div class="aboutme__star--small"></div>
+      <div class="aboutme__star--medium"></div>
+      <div class="aboutme__star--large"></div>
+      <div class="aboutme__title">
+        <span>
+          Jestem studentem pierwszego roku informatyki. Web development'u uczę
+          sie od roku, przez ten czas wykonałem kilka projektów
+          niekomercyjnych. Stak technologiczny na jakim pracuje to</span>
+        <br />
+        <span>Front-end:<b>HTML, CSS, SASS, React, Redux, Next.js</b></span>
+        <span>Back-end:<b>Node.js, Express, GraphQL</b></span>
+        <span>Aplikacje mobilne:<b>React-native</b></span>
+        <br />
+        <span>Korzystałem z bilotek CSS takich jak: Material-UI, Bulma. Potrafię
+          uzywać git'a oraz skofnigurować webpack'a</span>
+      </div>
+    </section>
+    <section class="projects">
+      <div class="projects__title">
+        <h1>Projekty - Projekty - Projekty</h1>
+      </div>
+      <div class="projects__items">
+        <div class="projects__items__item">
+          <div class="projects__items__item--desktop">
+            <img src="./assets/images/Bringo.png" alt="Bringo" />
+            <div class="projects__items__item--desktop__shorts">
+              <div class="projects__items__item--desktop__shorts--icons">
+                <a target="_blank" href="https://github.com/MateuszGajo/Bringo"
+                  class="projects__items__item--desktop__shorts--icons-code">Code</a>
+                <a target="_blank" href="https://bringo-app.herokuapp.com/"
+                  class="projects__items__item--desktop__shorts--icons-demo">Demo</a>
+              </div>
+            </div>
+          </div>
+          <div class="projects__items__item--mobile">
+            <img src="./assets/images/Bringomobile.png" alt="" />
+            <div class="projects__items__item--mobile__shorts">
+              <div class="projects__items__item--mobile__shorts--icons">
+                <a target="_blank" href="https://github.com/MateuszGajo/Bringo-mobile"
+                  class="projects__items__item--mobile__shorts--icons-code">Code</a>
+              </div>
+            </div>
+            <div class="projects__items__item--mobile__downbar">
+              <div class="projects__items__item--mobile__downbar--circle"></div>
+            </div>
+          </div>
+          <div class="projects__items__item--info">
+            <p class="projects__items__item--info__text-primary">
+              Bringo
+            </p>
+            <p class="projects__items__item--info__text-secondary">
+              Aplikacja do nauki słówek
+            </p>
           </div>
         </div>
-      </section>
-      <section class="aboutme">
-        <div class="aboutme__star--small"></div>
-        <div class="aboutme__star--medium"></div>
-        <div class="aboutme__star--large"></div>
-        <div class="aboutme__title">
-          <span>
-            Jestem studentem pierwszego roku informatyki. Web development'u uczę
-            sie od roku, przez ten czas wykonałem kilka projektów
-            niekomercyjnych. Stak technologiczny na jakim pracuje to</span
-          >
-          <br />
-          <span>Front-end:<b>HTML, CSS, SASS, React, Redux, Next.js</b></span>
-          <span>Back-end:<b>Node.js, Express, GraphQL</b></span>
-          <span>Aplikacje mobilne:<b>React-native</b></span>
-          <br />
-          <span
-            >Korzystałem z bilotek CSS takich jak: Material-UI, Bulma. Potrafię
-            uzywać git'a oraz skofnigurować webpack'a</span
-          >
+
+        <div class="projects__items__item">
+          <div class="projects__items__item--desktop">
+            <img src="./assets/images/Blog.png" alt="" />
+            <div class="projects__items__item--desktop__shorts">
+              <div class="projects__items__item--desktop__shorts--icons">
+                <a target="_blank" href="https://github.com/MateuszGajo/Blog"
+                  class="projects__items__item--desktop__shorts--icons-code">Code</a>
+                <a target="_blank" href="https://a-cooks-blog.herokuapp.com/"
+                  class="projects__items__item--desktop__shorts--icons-demo">Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="projects__items__item--info">
+            <p class="projects__items__item--info__text-primary">
+              Blog
+            </p>
+            <p class="projects__items__item--info__text-secondary">
+              Blog dla miłośników gotowania
+            </p>
+          </div>
         </div>
-      </section>
-    </div>
-    <script src="./assets/scripts/bundle.js"></script>
-  </body>
+        <div class="projects__items__item">
+          <div class="projects__items__item--desktop">
+            <img src="./assets/images/RoomPrice.png" alt="Wyszukiwarka pokoji" />
+            <div class="projects__items__item--desktop__shorts">
+              <div class="projects__items__item--desktop__shorts--icons">
+                <a target="_blank" href="https://github.com/MateuszGajo/Room-Price"
+                  class="projects__items__item--desktop__shorts--icons-code">Code</a>
+                <a target="_blank" href="https://hotel-b5ba7.firebaseapp.com/"
+                  class="projects__items__item--desktop__shorts--icons-demo">Demo</a>
+              </div>
+            </div>
+          </div>
+          <div class="projects__items__item--info">
+            <p class="projects__items__item--info__text-primary">
+              Room-Price
+            </p>
+            <p class="projects__items__item--info__text-secondary">
+              Wyszukiwarka pokoji.
+            </p>
+          </div>
+        </div>
+    </section>
+  </div>
+  <script src="./assets/scripts/bundle.js"></script>
+</body>
+
 </html>
