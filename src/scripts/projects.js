@@ -102,10 +102,16 @@ const moveProjects = e => {
 const scrollProject = action => {
   if (action === "on") {
     addEventListener("wheel", moveProjects);
-    stateModule.changeState({ ...stateModule.getState(), isScrollOn: false });
+    stateModule.changeState({
+      ...stateModule.getState(),
+      isScrollOn: false
+    });
   } else if (action === "off") {
     removeEventListener("wheel", moveProjects);
-    stateModule.changeState({ ...stateModule.getState(), isScrollOn: true });
+    stateModule.changeState({
+      ...stateModule.getState(),
+      isScrollOn: true
+    });
   }
 };
 
@@ -123,16 +129,21 @@ function preventDefaultForScrollKeys(e) {
 }
 
 addEventListener("wheel", e => {
-  const { transformProjectsPosition, isScrollOn } = stateModule.getState();
-  if (window.scrollY === projectSection.clientHeight && isScrollOn)
+  const {
+    transformProjectsPosition,
+    isScrollOn
+  } = stateModule.getState();
+  if (window.scrollY === projectSection.offsetTop && isScrollOn)
     scrollProject("on");
-  else if (window.scrollY < projectSection.clientHeight && !isScrollOn)
+  else if (window.scrollY < projectSection.offsetTopt && !isScrollOn)
     scrollProject("off");
 
   if (transformProjectsPosition < 0) {
     if (window.removeEventListener)
       window.addEventListener("DOMMouseScroll", preventDefault, false);
-    document.addEventListener("wheel", preventDefault, { passive: false });
+    document.addEventListener("wheel", preventDefault, {
+      passive: false
+    });
     window.onwheel = preventDefault;
     window.onmousewheel = document.onmousewheel = preventDefault;
     window.ontouchmove = preventDefault;
@@ -141,7 +152,9 @@ addEventListener("wheel", e => {
   } else if (transformProjectsPosition === 0) {
     if (window.removeEventListener)
       window.removeEventListener("DOMMouseScroll", preventDefault, false);
-    document.removeEventListener("wheel", preventDefault, { passive: false });
+    document.removeEventListener("wheel", preventDefault, {
+      passive: false
+    });
     window.onmousewheel = document.onmousewheel = null;
     window.onwheel = null;
     window.ontouchmove = null;
