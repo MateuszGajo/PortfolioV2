@@ -6,21 +6,19 @@ module.exports = {
   mode: devMode ? "development" : "production",
   entry: ["./src/scripts/main.js", "./src/styles/main.scss"],
   output: {
-    path: path.resolve(__dirname, "public"),
+    path: path.resolve(__dirname, "docs"),
     publicPath: "/assets",
     filename: "assets/scripts/bundle.js"
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.(js)$/,
         exclude: /node_modules/,
         use: ["babel-loader"]
       },
       {
         test: /\.(sa|sc)ss$/,
-        use: [
-          {
+        use: [{
             loader: MiniCssExtractPlugin.loader
           },
           {
@@ -39,16 +37,14 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]",
-              publicPath: "../images",
-              emitFile: false
-            }
+        use: [{
+          loader: "file-loader",
+          options: {
+            name: "[name].[ext]",
+            publicPath: "../images",
+            emitFile: false
           }
-        ]
+        }]
       }
     ]
   },
