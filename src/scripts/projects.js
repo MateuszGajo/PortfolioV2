@@ -136,7 +136,7 @@ addEventListener("wheel", e => {
   } = stateModule.getState();
   if (window.scrollY === projectSection.offsetTop && isScrollOn)
     scrollProject("on");
-  else if (window.scrollY < projectSection.offsetTopt && !isScrollOn)
+  else if (window.scrollY < projectSection.offsetTop && !isScrollOn)
     scrollProject("off");
 
   if (transformProjectsPosition < 0) {
