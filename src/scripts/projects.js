@@ -45,7 +45,8 @@ const moveProjects = e => {
       projects.style.transform = `translateX(${newTransformProjectsPosition -
         5}px)`;
     } else {
-      projectsTitle.style.transform = `translateX(${0}px)`;
+      projectsTitle.style.transform = `translateX(0)`;
+      projects.style.transform = `translateX(0)`;
       newTransformTitlePosition = 0;
       newTransformProjectsPosition = 0;
     }
@@ -144,7 +145,6 @@ addEventListener("wheel", e => {
     document.addEventListener("wheel", preventDefault, {
       passive: false
     });
-    window.onwheel = preventDefault;
     window.onmousewheel = document.onmousewheel = preventDefault;
     window.ontouchmove = preventDefault;
     document.onkeydown = preventDefaultForScrollKeys;
@@ -156,7 +156,6 @@ addEventListener("wheel", e => {
       passive: false
     });
     window.onmousewheel = document.onmousewheel = null;
-    window.onwheel = null;
     window.ontouchmove = null;
     document.onkeydown = null;
     document.querySelector("body").style.overflow = "visible";

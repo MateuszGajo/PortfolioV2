@@ -9,9 +9,6 @@ html {
 h1, h2, h3, h4, h5, h6, a {
   font-family: 'Oswald', sans-serif; }
 
-.space {
-  height: 100vh; }
-
 .projects {
   position: relative;
   height: 100vh;
@@ -23,6 +20,16 @@ h1, h2, h3, h4, h5, h6, a {
     display: flex;
     height: 80%;
     width: auto; }
+    .projects .projects__items .projects__items--info {
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 30px;
+      text-align: center; }
+      .projects .projects__items .projects__items--info h1 {
+        font-size: 2rem;
+        font-weight: bold; }
     .projects .projects__items .projects__items__item {
       height: 100%;
       display: flex;
