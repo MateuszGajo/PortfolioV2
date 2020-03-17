@@ -1,14 +1,17 @@
 .start {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #efefef;
+
   .start--text {
     position: absolute;
     top: 50%;
     margin: 0 10%;
     transform: translateY(-50%);
+
     h1 {
       font-size: 4rem;
     }
+
     p {
       margin-top: 5%;
     }
