@@ -1,19 +1,34 @@
 .start {
-  min-height: 100vh;
   background-color: #efefef;
 
   .start--text {
-    position: absolute;
-    top: 50%;
-    margin: 0 10%;
-    transform: translateY(-50%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 50px;
 
     h1 {
       font-size: 4rem;
+      text-align: center;
     }
 
     p {
       margin-top: 5%;
+      margin-bottom: 5%;
+    }
+  }
+}
+
+@media(max-width:1023px) {
+  .start {
+    .start--text {
+      margin: 0 20px;
+
+      h1 {
+        font-size: 3.5rem;
+      }
     }
   }
 }
