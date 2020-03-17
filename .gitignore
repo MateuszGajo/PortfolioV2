@@ -1,3 +1,9 @@
 /node_modules
 /public/assets/scripts
 /public/assets/styles
+/src
+/.babelrc
+/package-lock.json
+/package.json
+/postcss.config.js
+/webpack.config.js
