@@ -1,5 +1,6 @@
 .container .position {
   overflow-x: hidden;
+  margin: 35vh 0;
 
   .position__photo {
     position: relative;
@@ -13,7 +14,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       border-radius: 50%;
-      background-image: url("../../docs/assets/images/Myphoto.jpg");
+      background-image: url("../../docs/assets/images/pictureOfMe.jpg");
       background-repeat: no-repeat;
       background-size: 400px 600px;
       background-position: center;

@@ -26,7 +26,10 @@ const stateModule = (() => {
 
 const animateText = (speed = 0.15) => {
   let transformProgress;
-  const { isReverseText, transform } = stateModule.getState();
+  const {
+    isReverseText,
+    transform
+  } = stateModule.getState();
   const text = document.querySelector(".position__photo__title--text");
 
   if (!isReverseText) {
@@ -61,14 +64,15 @@ const animateText = (speed = 0.15) => {
 };
 
 const scrollAnimationText = event => {
-  animateText(0.3);
-  animateText(0.3);
+  animateText(0.5);
 };
 
 let textIntervalAnimate;
 
 const managmentAnimationText = type => {
-  const { textIntervalAnimate } = stateModule.getState();
+  const {
+    textIntervalAnimate
+  } = stateModule.getState();
   if (type === "start") {
     stateModule.changeState({
       ...stateModule.getState(),
