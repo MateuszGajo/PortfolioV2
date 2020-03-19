@@ -10,7 +10,8 @@ h1, h2, h3, h4, h5, h6, a {
   font-family: 'Oswald', sans-serif; }
 
 .container .position {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  margin: 35vh 0; }
   .container .position .position__photo {
     position: relative;
     width: 100vw;
@@ -22,7 +23,7 @@ h1, h2, h3, h4, h5, h6, a {
       left: 50%;
       transform: translate(-50%, -50%);
       border-radius: 50%;
-      background-image: url(../images/myimage.jpg);
+      background-image: url(../images/pictureOfMe.jpg);
       background-repeat: no-repeat;
       background-size: 400px 600px;
       background-position: center;
