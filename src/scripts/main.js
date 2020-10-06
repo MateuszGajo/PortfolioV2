@@ -1,2 +1,2 @@
-import "./position";
+import "./mySelf";
 import "./projects";

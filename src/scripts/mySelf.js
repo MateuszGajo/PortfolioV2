@@ -1,5 +1,5 @@
 const stateModule = (() => {
-  const positionSection = document.querySelector(".position");
+  const positionSection = document.querySelector(".my-self");
 
   let state = {
     isReverseText: false,
@@ -10,11 +10,11 @@ const stateModule = (() => {
     sectionHeight: positionSection.clientHeight,
     previousScrollYPosition: 0,
     circleSize: 300,
-    previousCircleSize: 300
+    previousCircleSize: 300,
   };
   const pub = {};
 
-  pub.changeState = newState => {
+  pub.changeState = (newState) => {
     state = newState;
   };
   pub.getState = () => {
@@ -26,57 +26,52 @@ const stateModule = (() => {
 
 const animateText = (speed = 0.15) => {
   let transformProgress;
-  const {
-    isReverseText,
-    transform
-  } = stateModule.getState();
-  const text = document.querySelector(".position__photo__title--text");
+  const { isReverseText, transform } = stateModule.getState();
+  const text = document.querySelector(".my-self__photo__title__text");
 
   if (!isReverseText) {
     if (transform + speed > 50) {
       text.style.transform = `translateX(50%)`;
       return stateModule.changeState({
         ...stateModule.getState(),
-        isReverseText: true
+        isReverseText: true,
       });
     }
     transformProgress = transform + speed;
     text.style.transform = `translateX(${transformProgress}%)`;
     stateModule.changeState({
       ...stateModule.getState(),
-      transform: transformProgress
+      transform: transformProgress,
     });
   } else if (isReverseText) {
     if (transform - speed < -50) {
       text.style.transform = `translateX(-50%)`;
       return stateModule.changeState({
         ...stateModule.getState(),
-        isReverseText: false
+        isReverseText: false,
       });
     }
     transformProgress = transform - speed;
     text.style.transform = `translateX(${transformProgress}%)`;
     stateModule.changeState({
       ...stateModule.getState(),
-      transform: transformProgress
+      transform: transformProgress,
     });
   }
 };
 
-const scrollAnimationText = event => {
+const scrollAnimationText = (event) => {
   animateText(0.5);
 };
 
 let textIntervalAnimate;
 
-const managmentAnimationText = type => {
-  const {
-    textIntervalAnimate
-  } = stateModule.getState();
+const managmentAnimationText = (type) => {
+  const { textIntervalAnimate } = stateModule.getState();
   if (type === "start") {
     stateModule.changeState({
       ...stateModule.getState(),
-      textIntervalAnimate: setInterval(animateText, 30)
+      textIntervalAnimate: setInterval(animateText, 30),
     });
     window.addEventListener("scroll", scrollAnimationText);
   } else if (type === "remove") {
@@ -89,7 +84,7 @@ window.addEventListener("scroll", () => {
   const {
     isTextAnimate,
     sectionFromTop,
-    sectionHeight
+    sectionHeight,
   } = stateModule.getState();
 
   const scrollY = window.scrollY;
@@ -103,25 +98,25 @@ window.addEventListener("scroll", () => {
       managmentAnimationText("start");
       stateModule.changeState({
         ...stateModule.getState(),
-        isTextAnimate: true
+        isTextAnimate: true,
       });
     }
   } else {
     managmentAnimationText("remove");
     stateModule.changeState({
       ...stateModule.getState(),
-      isTextAnimate: false
+      isTextAnimate: false,
     });
   }
 });
 
 const circleAnimatePhoto = () => {
-  const glass = document.querySelector(".position_photo--maginfier-glass");
+  const glass = document.querySelector(".my-self__photo--maginfier-glass");
   const {
     sectionFromTop,
     sectionHeight,
     circleSize,
-    previousCircleSize
+    previousCircleSize,
   } = stateModule.getState();
   if (
     window.scrollY + window.innerHeight < sectionFromTop ||
@@ -170,7 +165,7 @@ const circleAnimatePhoto = () => {
 
   stateModule.changeState({
     ...stateModule.getState(),
-    previousCircleSize: newCircleSize
+    previousCircleSize: newCircleSize,
   });
 };
 

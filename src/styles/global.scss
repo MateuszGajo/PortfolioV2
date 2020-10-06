@@ -1,0 +1,12 @@
+.item-circle__icon{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:60px;
+    height:60px;
+    font-size: 3rem;
+    border-radius:50%;
+    background: -webkit-linear-gradient(white, #38495a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

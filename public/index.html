@@ -5,25 +5,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
+  <script src="https://kit.fontawesome.com/ead889a1af.js"></script>
   <link rel="stylesheet" href="./assets/styles/main.css" />
   <link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,900&display=swap&subset=latin-ext"
     rel="stylesheet" />
+   
 </head>
 
 <body>
   <div class="container">
     <section class="start">
-      <div class="start--text">
-        <h1>Ponoś porażki często, abyś mógł odnieść sukces szybciej.</h1>
-        <p>TOM KELLEY, Ideo</p>
+      <div class="start__text">
+        <h1 class="start__text__quote">Ponoś porażki często, abyś mógł odnieść sukces szybciej.</h1>
+        <p class="start__text__author">TOM KELLEY, Ideo</p>
       </div>
     </section>
-    <section class="position">
-      <div class="position__photo">
-        <div class="position_photo--maginfier-glass"></div>
-        <img src="./assets/images/pictureOfMe.jpg" />
-        <div class="position__photo__title">
-          <h1 class="position__photo__title--text">
+    <section class="my-self">
+      <div class="my-self__photo">
+        <div class="my-self__photo--maginfier-glass"></div>
+        <img src="./assets/images/pictureOfMe.jpg" class="my-self__photo__img" />
+        <div class="my-self__photo__title">
+          <h1 class="my-self__photo__title__text">
             Mateusz Gajo Front-End Developer
           </h1>
         </div>
@@ -33,101 +35,140 @@
       <div class="aboutme__star--small"></div>
       <div class="aboutme__star--medium"></div>
       <div class="aboutme__star--large"></div>
-      <div class="aboutme__title">
-        <span>
-          Jestem studentem pierwszego roku informatyki. Web development'u uczę
-          sie od roku, przez ten czas wykonałem kilka projektów
-          niekomercyjnych. Stak technologiczny na jakim pracuje to</span>
+      <div class="aboutme__descripion">
+        <span class="aboutme__descripion__span">
+          Cześć, nazywam sie Mateusz Gajo i jestem studentem II roku informatyki na SGGW. Swoją przygodę z programowanie rozpocząłem poand rok temu, przez ten czas swoją wiedzę szlifowałem poprzez wykonywanie projektów niekomercyjnych. W swoich projektach staram się używać wzorców projektówych oraz pisać testy. Scieżkę którą obrałem dąży w stronę full-stack developera.</span>
         <br />
-        <span>Front-end:<b>HTML, CSS, SASS, React, Redux, Next.js</b></span>
-        <span>Back-end:<b>Node.js, Express, GraphQL</b></span>
-        <span>Aplikacje mobilne:<b>React-native</b></span>
-        <br />
-        <span>Korzystałem z bilotek CSS takich jak: Material-UI, Bulma. Potrafię korzystać z systemu kontroli wersji -
-          git, oraz skonfigurować webpack do projektu. </span>
+        
+        <h1 class="aboutme__descripion__title">Stak technologiczny</h1>
+        <div class="aboutme__descripion__stack">
+          <div class="aboutme__descripion__stack__wrapper">
+            <div class="aboutme__desctiption_stack__wrapper__icon">
+              <i class="fab fa-html5 item-circle__icon"></i>
+              <span class="aboutme__desctiption_stack__wrapper__icon__text">HTML</span>
+            </div>
+            <div class="aboutme__desctiption_stack__wrapper__icon">
+              <i class="fab fa-css3-alt item-circle__icon"></i>
+              <span class="aboutme__desctiption_stack__wrapper__icon__text">CSS</span>
+            </div>
+            <div class="aboutme__desctiption_stack__wrapper__icon">
+              <i class="fab fa-sass item-circle__icon"></i>
+              <span class="aboutme__desctiption_stack__wrapper__icon__text">SASS</span>
+            </div>
+          </div>
+          <div class="aboutme__descripion__stack__wrapper">
+            <div class="aboutme__desctiption_stack__wrapper__icon">
+              <i class="fab fa-js item-circle__icon"></i>
+              <span class="aboutme__desctiption_stack__wrapper__icon__text">JS</span>
+            </div>
+            <div class="aboutme__desctiption_stack__wrapper__icon">
+              <i class="fab fa-react item-circle__icon"></i>
+              <span class="aboutme__desctiption_stack__wrapper__icon__text">React</span>
+            </div>
+            <div class="aboutme__desctiption_stack__wrapper__icon">
+              <i class="fab fa-node-js item-circle__icon"></i>
+              <span class="aboutme__desctiption_stack__wrapper__icon__text">Node</span>
+            </div>
+          </div>
+          <div class="aboutme__descripion__stack__wrapper">
+            <div class="aboutme__desctiption_stack__wrapper__icon">
+              <i class="fab fa-gofore item-circle__icon"></i>
+              <span class="aboutme__desctiption_stack__wrapper__icon__text">GraphQL</span>
+            </div>
+            <div class="aboutme__desctiption_stack__wrapper__icon">
+              <i class="fab fa-git-alt item-circle__icon"></i>
+              <span class="aboutme__desctiption_stack__wrapper__icon__text">GIT</span>
+            </div>
+            <div class="aboutme__desctiption_stack__wrapper__icon">
+              <i class="fas fa-code item-circle__icon"></i>
+              <span class="aboutme__desctiption_stack__wrapper__icon__text">VSC</span>
+            </div>
+          </div>
+        </div>
       </div>
+      
     </section>
     <section class="projects">
       <div class="projects__title">
-        <h1>Projekty - Projekty - Projekty</h1>
+        <h1 class="projects__title__h1">Projekty - Projekty - Projekty</h1>
       </div>
       <div class="projects__items">
-        <div class="projects__items--info">
-          <h1>SCROLLUJ ABY ZOBACZYĆ PROJEKTY</h1>
+        <div class="projects__items__info">
+          <h1 class="projects__items__info__h1">SCROLLUJ ABY ZOBACZYĆ PROJEKTY</h1>
         </div>
         <div class="projects__items__item">
-          <div class="projects__items__item--desktop">
-            <img src="./assets/images/Bringo.png" alt="Bringo" />
-            <div class="projects__items__item--desktop__shorts">
-              <div class="projects__items__item--desktop__shorts--icons">
+          <div class="projects__items__item__desktop">
+            <img src="./assets/images/Bringo.png" alt="Bringo" class="projects__items__item__desktop__photo" />
+            <div class="projects__items__item__desktop__shorts">
+              <div class="projects__items__item__desktop__shorts__icons">
                 <a target="_blank" href="https://github.com/MateuszGajo/Bringo"
-                  class="projects__items__item--desktop__shorts--icons-code">Kod</a>
+                  class="projects__items__item__desktop__shorts__icons-code projects__items__item__desktop__shorts__icons__a">Kod</a>
                 <a target="_blank" href="https://bringo-app.herokuapp.com/"
-                  class="projects__items__item--desktop__shorts--icons-demo">Podgląd</a>
+                  class="projects__items__item__desktop__shorts__icons-demo projects__items__item__desktop__shorts__icons__a">Podgląd</a>
               </div>
             </div>
           </div>
-          <div class="projects__items__item--mobile">
-            <img src="./assets/images/Bringomobile.png" alt="" />
-            <div class="projects__items__item--mobile__shorts">
-              <div class="projects__items__item--mobile__shorts--icons">
+          <div class="projects__items__item__mobile">
+            <img src="./assets/images/Bringomobile.png" alt="" class="projects__items__item__mobile__photo" />
+            <div class="projects__items__item__mobile__shorts">
+              <div class="projects__items__item__mobile__shorts__icons projects__items__item__mobile__shorts__icons__a">
                 <a target="_blank" href="https://github.com/MateuszGajo/Bringo-mobile"
-                  class="projects__items__item--mobile__shorts--icons-code">Kod</a>
+                  class="projects__items__item__mobile__shorts__icons-code projects__items__item__mobile__shorts__icons__a">Kod</a>
               </div>
             </div>
-            <div class="projects__items__item--mobile__downbar">
-              <div class="projects__items__item--mobile__downbar--circle"></div>
+            <div class="projects__items__item__mobile__downbar">
+              <div class="projects__items__item__mobile__downbar__circle"></div>
             </div>
           </div>
-          <div class="projects__items__item--info">
-            <p class="projects__items__item--info__text-primary">
+          <div class="projects__items__item__info">
+            <p class="projects__items__item__info__text-primary">
               Bringo
             </p>
-            <p class="projects__items__item--info__text-secondary">
+            <p class="projects__items__item__info__text-secondary">
               Aplikacja do nauki słówek
             </p>
           </div>
         </div>
 
         <div class="projects__items__item">
-          <div class="projects__items__item--desktop">
-            <img src="./assets/images/Blog.jpg" alt="" />
-            <div class="projects__items__item--desktop__shorts">
-              <div class="projects__items__item--desktop__shorts--icons">
+          <div class="projects__items__item__desktop">
+            <img src="./assets/images/Blog.jpg" alt="" class="projects__items__item__desktop__photo" />
+            <div class="projects__items__item__desktop__shorts">
+              <div class="projects__items__item__desktop__shorts__icons">
                 <a target="_blank" href="https://github.com/MateuszGajo/Blog"
-                  class="projects__items__item--desktop__shorts--icons-code">Kod</a>
+                  class="projects__items__item__desktop__shorts__icons-code projects__items__item__desktop__shorts__icons__a">Kod</a>
                 <a target="_blank" href="https://a-cooks-blog.herokuapp.com/"
-                  class="projects__items__item--desktop__shorts--icons-demo">Podgląd</a>
+                  class="projects__items__item__desktop__shorts__icons-demo projects__items__item__desktop__shorts__icons__a">Podgląd</a>
               </div>
             </div>
           </div>
 
-          <div class="projects__items__item--info">
-            <p class="projects__items__item--info__text-primary">
+          <div class="projects__items__item__info">
+            <p class="projects__items__item__info__text-primary">
               Blog
             </p>
-            <p class="projects__items__item--info__text-secondary">
+            <p class="projects__items__item__info__text-secondary">
               Blog dla miłośników gotowania
             </p>
           </div>
         </div>
         <div class="projects__items__item">
-          <div class="projects__items__item--desktop">
-            <img src="./assets/images/RoomPrice.jpg" alt="Wyszukiwarka pokoji" />
-            <div class="projects__items__item--desktop__shorts">
-              <div class="projects__items__item--desktop__shorts--icons">
+          <div class="projects__items__item__desktop">
+            <img src="./assets/images/RoomPrice.jpg" alt="Wyszukiwarka pokoji" class="projects__items__item__desktop__photo" />
+            <div class="projects__items__item__desktop__shorts">
+              <div class="projects__items__item__desktop__shorts__icons">
                 <a target="_blank" href="https://github.com/MateuszGajo/Room-Price"
-                  class="projects__items__item--desktop__shorts--icons-code">Kod</a>
+                  class="projects__items__item__desktop__shorts__icons-code projects__items__item__desktop__shorts__icons__a">Kod</a>
                 <a target="_blank" href="https://hotel-b5ba7.firebaseapp.com/"
-                  class="projects__items__item--desktop__shorts--icons-demo">Podgląd</a>
+                  class="projects__items__item__desktop__shorts__icons-demo projects__items__item__desktop__shorts__icons__a">Podgląd</a>
               </div>
             </div>
           </div>
-          <div class="projects__items__item--info">
-            <p class="projects__items__item--info__text-primary">
+          <div class="projects__items__item__info">
+            <p class="projects__items__item__info__text-primary">
               Room-Price
             </p>
-            <p class="projects__items__item--info__text-secondary">
+            <p class="projects__items__item__info__text-secondary">
               Wyszukiwarka pokoji.
             </p>
           </div>
