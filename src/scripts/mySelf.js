@@ -1,13 +1,13 @@
 const stateModule = (() => {
-  const positionSection = document.querySelector(".my-self");
+  const mySelfSection = document.querySelector(".my-self");
 
   let state = {
     isReverseText: false,
     transform: -50,
     textIntervalAnimate: null,
     isTextAnimate: false,
-    sectionFromTop: positionSection.offsetTop,
-    sectionHeight: positionSection.clientHeight,
+    sectionFromTop: mySelfSection.offsetTop,
+    sectionHeight: mySelfSection.clientHeight,
     previousScrollYPosition: 0,
     circleSize: 300,
     previousCircleSize: 300,
